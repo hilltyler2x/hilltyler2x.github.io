@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tidy Tides: Color Sort Puzzle</title>
+<meta name="description" content="Clear a messy beach by sorting trash by color. Three new Daily Tides every day. No lives, no timers. Free on iPhone and Android.">
+<meta name="theme-color" content="#0c4253">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tidy Tides: Color Sort Puzzle">
+<meta property="og:description" content="Three new Daily Tides every day. Can you beat my score? Free on iPhone and Android.">
+<meta property="og:site_name" content="Tidy Tides">
+<meta property="og:url" content="https://hilltyler2x.github.io/tidy-tides/">
+<meta property="og:image" content="https://hilltyler2x.github.io/tidy-tides/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hilltyler2x.github.io/tidy-tides/og-image.jpg">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.webp" type="image/webp">
+<style>
+@font-face{font-family:"Lilita One";font-display:swap;src:url(fonts/lilita-one-latin.woff2) format("woff2")}
+@font-face{font-family:"Nunito";font-weight:200 1000;font-display:swap;src:url(fonts/nunito-latin.woff2) format("woff2")}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;
+ font-family:Nunito,system-ui,sans-serif;color:#fff;background:linear-gradient(#0c4253,#127a8a 60%,#f2d9a6);text-align:center}
+main{max-width:420px;width:100%}
+img.icon{width:112px;height:112px;border-radius:24px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+h1{font-family:"Lilita One",sans-serif;font-weight:400;font-size:2.2rem;margin:16px 0 4px;letter-spacing:.5px}
+p{font-size:1.05rem;line-height:1.5;margin:8px 0}
+.vs{background:rgba(255,255,255,.15);border-radius:14px;padding:10px 14px;margin:16px 0;font-weight:800}
+.btns{display:flex;flex-direction:column;gap:12px;margin:22px 0}
+a.btn{display:block;padding:14px 18px;border-radius:14px;background:#fff;color:#0c4253;font-weight:900;font-size:1.1rem;text-decoration:none}
+a.btn:hover{background:#ffeec9}
+small a{color:#0c4253}
+small{display:block;margin-top:24px;color:#0c4253}
+</style>
+</head>
+<body>
+<main>
+<img class="icon" src="icons/icon-256.webp" alt="Tidy Tides app icon" width="112" height="112">
+<h1>Tidy Tides</h1>
+<p>Clear the beach by sorting trash by color. Three new Daily Tides every day. No lives, no timers.</p>
+<p class="vs" id="vs" hidden>A friend challenged you to today's Daily Tides. Get the app to play the same puzzles.</p>
+<div class="btns">
+<a class="btn" id="ios" href="https://apps.apple.com/app/tidy-tides-color-sort-puzzle/id6832137681">Download on the App Store</a>
+<a class="btn" id="android" href="https://play.google.com/store/apps/details?id=com.enouement.tidytides">Get it on Google Play</a>
+</div>
+<small><a href="privacy.html">Privacy policy</a></small>
+</main>
+<script>
+if (/[?&]vs=/.test(location.search)) document.getElementById("vs").hidden = false;
+var ua = navigator.userAgent, b = document.querySelector(".btns");
+if (/android/i.test(ua)) b.insertBefore(document.getElementById("android"), b.firstChild);
+</script>
+</body>
+</html>
